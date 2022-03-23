@@ -1,10 +1,9 @@
 import 'package:astrotak_assignment/view/ask_question_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(AssignmentApp());
+  runApp(const AssignmentApp());
 }
 
 class AssignmentApp extends StatelessWidget {
@@ -14,10 +13,10 @@ class AssignmentApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData.light().copyWith(
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white, foregroundColor: Colors.orange),
       ),
-      home: HomePage(),
+      home: const HomePage(),
       title: 'Astrotak Assignment',
     );
   }
