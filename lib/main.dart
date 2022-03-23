@@ -18,6 +18,7 @@ class AssignmentApp extends StatelessWidget {
             backgroundColor: Colors.white, foregroundColor: Colors.orange),
       ),
       home: HomePage(),
+      title: 'Astrotak Assignment',
     );
   }
 }
