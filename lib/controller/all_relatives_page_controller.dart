@@ -1,5 +1,6 @@
 import 'package:astrotak_assignment/data_provider.dart';
 import 'package:astrotak_assignment/model/relative_api_respsonse_model.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -42,6 +43,8 @@ class AllRelativesPageController extends GetxController {
   void deleteRelative(String uuid) {
     deleteRelativeProfile(uuid).then((_) {
       Get.back();
+      Fluttertoast.showToast(msg: 'Profile Deleted Successfully');
+
       refreshRelatives();
     });
   }

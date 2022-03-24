@@ -6,6 +6,7 @@ import 'package:astrotak_assignment/getXIDs.dart';
 import 'package:astrotak_assignment/model/RelationModel.dart';
 import 'package:flutter/material.dart';
 import 'package:astrotak_assignment/constants.dart' as constants;
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
 import '../model/place_predictions_response_model.dart';
@@ -190,6 +191,7 @@ class AddEditProfileController extends GetxController {
 
     addRelativeProfile(relativeAddModel).then((value) {
       Get.back();
+      Fluttertoast.showToast(msg: 'Profile Added Successfully');
       Get.find<AllRelativesPageController>().refreshRelatives();
 
       Get.find<FriendsAndFamilyProfileController>().goToRelativeScreen();
@@ -223,6 +225,7 @@ class AddEditProfileController extends GetxController {
 
     updateRelativeProfile(relativeUpdateModel).then((value) {
       Get.back();
+      Fluttertoast.showToast(msg: 'Profile Updated Successfully');
       Get.find<AllRelativesPageController>().refreshRelatives();
 
       Get.find<FriendsAndFamilyProfileController>().goToRelativeScreen();
